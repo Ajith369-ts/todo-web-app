@@ -1,0 +1,42 @@
+<%- include("../includes/header"); -%>
+
+<body>
+    <div class="box hbox" id="heading">
+        <div class="row">
+            <div class="col">
+                <h1 class="date"><%= day %></h1>
+                <h1 class="day"><%= date %></h1>
+            </div>
+            <div class="col">
+                <h1 class="month"><%= month %></h1>
+                <h1 class="year"><%= year %></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="box listBox">
+
+        <% addList.forEach(element => { %>
+
+                <div class="item">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" name="checkBox" value="<%= element %>" onclick="deleteList(this)">
+                    <p><%= element %></p>
+                    <input id="userId" type="hidden" name="name" value="<%= FOUNDUSER %>">
+                </div>
+
+        <% }); %>    
+
+        <div class="addItem">
+            <input id="addField" type="text" name="newItem" placeholder="Add work" autocomplete="off">
+            <button class="plus-btn" type="button" name="list" value="<%= FOUNDUSER %>" onclick="addItem(this)">+</button>
+        </div>
+
+    </div>
+
+    <div style="text-align: center;">
+        <a class="logout btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+    </div>
+
+    <script src="/js/todo.js"></script>
+
+    <%- include("../includes/footer"); -%>

@@ -1,0 +1,210 @@
+::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/todo\ ui.svg);
+  min-height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0 20px 40px;
+  font-size: 23px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+.hbox {
+  background-image: linear-gradient(45deg, #8BBAFF, #7F77DC);
+}
+
+.box {
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1%;
+  margin: 50px auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+input[type="text"],
+input[type="password"] {
+  text-align: left;
+  height: 60px;
+  background: transparent;
+  font-size: 20px;
+  width: 310px;
+}
+
+input[name="newItem"] {
+  text-align: center;
+  height: 60px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  width: 310px;
+  outline: none;
+}
+
+button {
+  min-height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #23ff4f;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 8px;
+  border-width: 0;
+}
+
+button:hover {
+  background-color: #4cff55;
+}
+
+.addItem {
+  margin-top: 10px;
+}
+
+.form-check-input[type=checkbox] {
+  border-radius: 50%;
+  margin-left: 13px;
+}
+
+.form-check-input {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.form-check-input:checked {
+  background-color: #23ff4f;
+  border-color: #18ff20;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #5e6b61;
+}
+
+::placeholder {
+  color: rgb(148, 148, 148, 0.7);
+  font-size: 20px;
+}
+
+.date {
+  font-size: 60px;
+}
+
+.day, .month {
+  font-size: 30px;
+}
+
+.year {
+  font-size: 40px;
+}
+
+.col {
+  margin: auto;
+}
+
+.login, .register {
+  padding: 4%;
+}
+
+.log_btn, .register_btn {
+  min-height: 45px;
+  width: 37%;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  background-image: linear-gradient(45deg, #8BBAFF, #7F77DC);
+}
+
+.log_btn:hover, .register_btn:hover {
+  background-image: linear-gradient(180deg, #8BBAFF, #7F77DC);
+}
+
+.no-acc, .have-acc {
+  text-decoration: none;
+}
+
+.logout {
+  color: #fff;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  background-image: linear-gradient(45deg, #8BBAFF, #7F77DC);
+}
+
+.logout:hover {
+  color: #fff;
+  background-image: linear-gradient(180deg, #8BBAFF, #7F77DC);
+}
+
+#exist{
+  text-align: left;
+  font-size: 12px;
+  padding: 0;
+  margin-bottom: 5px;
+  color: red;
+}
+
+#digit_err {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.pageNotFound {
+  padding-top: 100px;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+
+  body {
+    padding: 1.5rem;
+  }
+
+  .box {
+    max-width: 350px;
+  }
+
+  .date {
+    font-size: 50px;
+  }
+  
+  .day, .month {
+    font-size: 20px;
+  }
+  
+  .year {
+    font-size: 30px;
+  }
+
+  .logReg {
+    margin: 3px 0 10px;
+  }
+
+}
